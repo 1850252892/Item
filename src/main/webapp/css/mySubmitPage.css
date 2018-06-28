@@ -1,0 +1,188 @@
+@CHARSET "UTF-8";
+
+body, div, form, img, ul, ol, li, dl, dt, dd, form, p, h1, a {
+	margin: 0px;
+	padding: 0px;
+	border: 0px none;
+	list-style: none outside none;
+	text-decoration: none;
+}
+
+body {
+	background: url("../images/background/timg.jpg");
+	height:900px;
+	
+}
+.top {
+	width: 100%;
+	height: 60px;
+	float: left;
+	background-color: rgba(53, 53, 53,0.9);
+	text-align: left;
+	float: left;
+	border-bottom:1px solid rgba(83, 34, 34, 0.8);
+	padding: 10px 10px 10px 50px;
+	font-weight: 800;
+}
+
+.tl {
+	
+	text-align: center;
+	
+}
+
+.top a {
+	float: right;
+	font-size: 20px;
+	color: black;
+	padding: 10px;
+	margin-right: 10px;
+	text-decoration: none;
+	border: 1px solid white;
+}
+
+
+
+.left-menu {
+	width: 15%;
+	height:100%;
+	background-color: rgba(53, 53, 53,0.9);
+	padding-top: 20px;
+	float: left;
+	text-align: center;
+	float: left;
+	
+	font-size: 18px;
+	font-weight: 200;
+	color:white;
+}
+.left-menu a {
+	height:60px;
+	line-height:20px;
+	padding:5px;
+	text-decoration: none;
+	color:white;
+}
+
+.left-menu a:link {
+	text-decoration: none;
+	color:white;
+}
+
+.left-menu a:visited {
+	color:white;
+}
+
+.left-menu a:hover {
+	background-color: black;
+	color: white;
+	text-decoration: none;
+}
+.left-menu a:active {
+	text-decoration: none;
+	background-color: black;
+	color:white;
+}
+.menu-param {
+	float: left;
+	width: 100%;
+
+	height: 40px;
+	overflow: hidden;
+	text-decoration: none;
+	text-align: center;
+}
+
+.right-data {
+	width: 76%;
+	float: left;
+	background-color: rgba(85, 81, 81, 0.8);
+	padding: 10px;
+	margin-left:12%;
+}
+
+.u-data {
+	width: 100%;
+	float: left;
+	height: 120px;
+	padding:10px 0 10px 0;
+	border: 1px solid rgb(224, 234, 238);
+	background-color: rgba(48, 43, 43,0.8);
+	color:white;
+}
+
+.u-logo {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left:10px;
+	border: 1px solid;
+	border-radius: 50px;
+}
+
+.u-nick {
+	margin-left: 20px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 25px;
+	float: left;
+}
+
+.d-table {
+	width: 100%;
+	float: left;
+	height: 60px;
+	padding:15px 0 15px 0;
+	background-color: white;
+	border: 1px solid rgb(224, 234, 238);
+	border-top: 0;
+}
+.dt-param {
+	width: 24%;
+	height: 30 px;
+	line-height:30px;
+	text-align:center;
+	float:left;
+	border-right:1px solid rgb(224, 234, 238);
+}
+.all-data{
+	margin-top:0px;
+	width:100%;
+	float:left;
+	border: 1px solid rgb(224, 234, 238);
+}
+.loadboxs{
+	margin-top:30px;
+	width:100%;
+	float:left;
+	border: 1px solid rgb(224, 234, 238);
+}
+.a-top{
+	width:100%;
+	height:60px;
+	float:left;
+	background-color: rgba(48, 43, 43,0.8);
+	line-height: 60px;
+	color:white;
+	padding-left:20px;
+	font-size: 25px;
+}
+.a-top span{
+	height:60px;
+	line-height:60px;
+	padding-right:10px;
+	float:right;
+}
+.a-param{
+	width:100%;
+	height:60px;
+	color:white;
+	line-height: 60px;
+	padding-left:20px;
+	float:left;	
+	font-size:15px;
+}
+.a-param span{
+	margin-right:10px;
+	font-size:15px;
+}

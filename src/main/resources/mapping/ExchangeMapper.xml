@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.ExchangeMapper">
+	<resultMap type="model.ExcDate" id="ecxDate">
+		<id column="id" property="excId"/>
+		<result column="date" property="excDate"/>
+		<result column="gid_a" property="gid_a"/>
+		<result column="gname_a" property="gname_a"/>
+		<result column="img_a" property="img_a"/>
+		<result column="gid_b" property="gid_b"/>
+		<result column="gname_b" property="gname_b"/>
+		<result column="img_b" property="img_b"/>
+		<result column="info" property="info"/>
+		<result column="state" property="state"/>
+	</resultMap>
+</mapper>

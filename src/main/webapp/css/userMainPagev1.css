@@ -1,0 +1,187 @@
+@CHARSET "UTF-8";
+
+body, div, form, img, ul, ol, li, dl, dt, dd, form, p, h1, a {
+	margin: 0px;
+	padding: 0px;
+	border: 0px none;
+	list-style: none outside none;
+	text-decoration: none;
+}
+
+body {
+	background:rgba(147, 165, 165, 1);
+    background-attachment:fixed;
+	
+}
+.top {
+	width: 100%;
+	height: 60px;
+	float: left;
+	background-color: rgba(53, 53, 53,0.9);
+	text-align: left;
+	float: left;
+	border-bottom:1px solid rgba(83, 34, 34, 0.8);
+	padding: 10px 10px 10px 50px;
+	font-weight: 800;
+}
+
+.tl {
+	
+	text-align: center;
+	
+}
+
+.top a {
+	float: right;
+	font-size: 20px;
+	color: black;
+	padding: 10px;
+	margin-right: 10px;
+	text-decoration: none;
+	border: 1px solid white;
+}
+
+
+
+.left-menu {
+	width: 200px;
+	background-image: url("/images/background/leftBgd.jpg");
+	/*background-color: #474f61;*/
+	top: 0px;
+	left: 0px;
+    padding-top: 20px;
+	text-align: center;
+	/*border-right:1px solid;*/
+	font-size: 18px;
+	font-weight: 200;
+	color:white;
+	position: fixed;
+}
+.left-menu a {
+    display: block;
+    width: 100%;
+    overflow: auto;
+	text-decoration: none;
+	color:white;
+}
+
+.left-menu a:link {
+	text-decoration: none;
+	color:white;
+}
+
+.left-menu a:visited {
+	color:white;
+}
+
+.left-menu a:hover {
+	background-color: rgba(77,87,109,0.5);
+	color: white;
+	text-decoration: none;
+}
+.left-menu a:active {
+	text-decoration: none;
+	background-color: black;
+	color:white;
+}
+.menu-param {
+	float: left;
+	width: 100%;
+    margin-top: 10px;
+	height: 35px;
+    line-height: 35px;
+	overflow: hidden;
+	text-decoration: none;
+	text-align: center;
+}
+
+.right-data {
+	float: left;
+    width: 100%;
+	background-color: rgb(248, 244, 255);
+    margin-top: 0px;
+    margin-left: 200px;
+	color: black;
+	padding: 0px;
+}
+
+.u-data {
+	width: 100%;
+	float: left;
+	height: 120px;
+	padding:10px 0 10px 0;
+	/* border: 1px solid rgb(224, 234, 238); */
+    background-color: rgb(248, 244, 255);
+	color: #636363;
+}
+
+.u-logo {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left:10px;
+	border: 1px solid;
+	border-radius: 50px;
+}
+
+.u-nick {
+	margin-left: 20px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 25px;
+	float: left;
+}
+
+.d-table {
+	width: 100%;
+	float: left;
+	height: 60px;
+	padding:15px 0 15px 0;
+	background-color: white;
+	border: 1px solid rgb(224, 234, 238);
+	border-top: 0;
+}
+.dt-param {
+	width: 24%;
+	height: 30px;
+	line-height:30px;
+	text-align:center;
+	float:left;
+	border-right:1px solid rgb(224, 234, 238);
+}
+.all-data{
+	margin-top:30px;
+	width:100%;
+	float:left;
+	/* border: 1px solid rgb(224, 234, 238); */
+}
+.a-top{
+	width:100%;
+	height:60px;
+	float:left;
+	background-color:white;
+	line-height: 60px;
+	color: #636363;
+	font-weight: bold;
+	padding-left:20px;
+	font-size: 25px;
+}
+.a-top span{
+	height:60px;
+	line-height:60px;
+	padding-right:10px;
+	float:right;
+}
+.a-param{
+	width:100%;
+	height:60px;
+	color:black;
+	line-height: 60px;
+	padding-left:20px;
+	float:left;	
+	font-size:15px;
+}
+.a-param span{
+	margin-right:10px;
+	font-size:15px;
+}

@@ -1,0 +1,95 @@
+@CHARSET "UTF-8";
+
+.head-dock {
+    width: 100%;
+	min-width: 1170px;
+	margin: 0 auto;
+	height:35px;
+	line-height:35px;
+	background-color: rgb(242, 242, 242);
+	border-bottom: 1px solid rgb(229,229,229);
+    text-decoration: none;
+}
+.head-dock span{
+	margin-right:10px;
+}
+.head {
+	width: 1170px;
+	margin: 0 auto;
+	height: 135px;
+	border-bottom: 5px solid red;
+}
+
+.head .logo {
+	/*margin-left:200px;*/
+    padding-top: 20px;
+	width: 200px;
+    /*margin-top: -35px;*/
+    height: 130px;
+    background: white;
+	color: rgba(255, 0, 0, 0.93);
+	float: left;
+}
+
+.head h1 {
+	padding: 0;
+	width: 100%;
+	float: left;
+	font-size: 60px;
+	width: 100%;
+	margin: 0;
+    text-align: center;
+	color: red;
+}
+
+.head h4 {
+	padding: 0;
+	width: 100%;
+	float: left;
+	font-size: 25px;
+    text-align: center;
+	width: 100%;
+	margin: 0;
+	font-weight: bold;
+}
+
+.head ul {
+	float: right;
+	font-weight: 500;
+	list-style:none;
+	color: #93a5a5;
+}
+
+.head ul li {
+	float: left;
+	font-family: "微软雅黑";
+	font-style: inherit;
+	font-size: 15px;
+	margin-right: 30px;
+}
+
+a {
+	text-decoration: none;
+	font-size: 15px;
+    color: #93a5a5;
+}
+a:hover{
+    text-decoration: none;
+    color: #93a5a5;
+}
+.logo a{
+	text-decoration: none;
+}
+
+
+#ul li,#ul a{
+	float: none;
+	color: #636363;
+}
+
+
+#uName, #eData {
+    float: right;
+    color: #669;
+    margin-left: 10px;
+}

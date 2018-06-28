@@ -1,0 +1,76 @@
+@CHARSET "UTF-8";
+
+body, div, form, img, ul, ol, li, dl, dt, dd, form, p, h1, a {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    list-style: none outside none;
+    text-decoration: none;
+}
+
+
+.left-menu {
+    width: 200px;
+    height: 100%;
+    background-image: url("/images/background/leftBgd.jpg");
+    top: 0px;
+    left: 0px;
+    padding-top: 20px;
+    text-align: center;
+    /*border-right:1px solid;*/
+    font-size: 18px;
+    font-weight: 200;
+    color:white;
+    position: fixed;
+}
+.left-menu a {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    text-decoration: none;
+    color:white;
+}
+
+.left-menu a:link {
+    text-decoration: none;
+    color:white;
+
+}
+
+.left-menu a:visited {
+    color:white;
+    background-color: rgba(77,87,109,1);
+}
+
+.left-menu a:hover {
+    background-color: rgba(245, 190, 229, 0.2);
+    color: white;
+    text-decoration: none;
+}
+.left-menu a:active {
+    text-decoration: none;
+    background-color: black;
+    color:white;
+}
+.menu-param {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+}
+
+.right-data {
+    /*float: left;*/
+    width: 100%;
+    margin-top: 0px;
+    padding-left: 200px;
+}
+thead {
+    font-family: "黑体";
+    background: rgba(221,221,221,1);
+
+}

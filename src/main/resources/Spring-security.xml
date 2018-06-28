@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd    
+http://www.springframework.org/schema/security   
+http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+	<global-method-security pre-post-annotations="enabled">
+	</global-method-security>
+	
+	<!-- 不拦截的路径 -->
+	<http pattern="/registerPage" security="none" />
+	<http pattern="/mainPage" security="none"></http>
+	<http pattern="/item/itemid**" security="none"></http>
+	<http pattern="/item/get**" security="none"></http>
+	<http pattern="/css/**" security="none" />
+	<http pattern="/font/**" security="none" />
+	<http pattern="/images/**" security="none" />
+	<http pattern="/js/**" security="none" />
+	
+	<http auto-config="true">
+		<!-- 登录配置 -->
+		<form-login login-page="/loginPage"
+			authentication-failure-url="/login/failure"
+			login-processing-url="/login" 
+			authentication-success-handler-ref="mySuccessHandler"  
+			username-parameter="username"
+			password-parameter="password" />
+
+		<!-- 用户登出 -->
+		<logout invalidate-session="true" logout-success-url="/loginPage"
+			logout-url="/logout" />
+			
+		<!-- 拦截页面 -->	
+		<intercept-url pattern="/item/**" access="ROLE_USER" />
+		<intercept-url pattern="/admin/**" access="ROLE_USER" />
+	</http>
+	
+	<!-- 登录成功的处理方法 -->
+	<beans:bean id="mySuccessHandler" class="security.LoginSuccessHandle" ></beans:bean>
+	
+	<!-- 获取UserDettail的bean -->
+	<beans:bean id="UserDetailService" class="security.MyUserDetailService"></beans:bean>
+	
+	<!-- 在这里也是一个大坑，查询网上的文章，这里都是引用的实现了UserDetailsService的类 -->
+	<beans:bean id="UserService" class="security.SecurityProvider"></beans:bean>
+	<authentication-manager>
+		<authentication-provider ref="UserService">
+		</authentication-provider>
+	</authentication-manager>
+</beans:beans>

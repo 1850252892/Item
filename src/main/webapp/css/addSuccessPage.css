@@ -1,0 +1,77 @@
+@CHARSET "UTF-8";
+body, div, form, img, ul, ol, li, dl, dt, dd, form, p, h1, a {
+	margin: 0px;
+	padding: 0px;
+	border: 0px none;
+	list-style: none outside none;
+	text-decoration: none;
+}
+
+body {
+	background-color: #A6E1EC;
+}
+
+.data {
+	width: 60%;
+	margin: 30px 20% 0 20%;
+	background-color: white;
+	float: left;
+	border: 1px solid rgb(224, 234, 238);
+}
+
+.title {
+	width: 100%;
+	height: 60px;
+	background-color: rgb(245, 245, 245);
+	padding: 0 0 0 10px;
+	line-height: 60px;
+	font-size: 25px;
+}
+
+.item {
+	width: 100%;
+	float: left;
+}
+
+.name, .classification {
+	width: 50%;
+	height: 50px;
+	float: left;
+	line-height: 50px;
+	padding-left: 10px;
+	border-bottom: 1px solid rgb(224, 234, 238);
+	font-size: 20px;
+}
+
+.imgs {
+	float: left;
+	margin: 10px;
+	border: 1px solid rgb(224, 234, 238);
+}
+
+.detail {
+	width: 100%;
+	height: 120px;
+	border-top: 1px solid rgb(224, 234, 238);
+	float: left;
+	padding: 10px;
+	font-size: 18px;
+}
+
+.bottom {
+	width: 100%;
+	height: 40px;
+	float: left;
+	background-color: rgb(245, 245, 245);
+	text-align: center;
+	line-height: 40px;
+}
+
+.data span {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 10px;
+	font-size: 25px;
+	float: left;
+}
