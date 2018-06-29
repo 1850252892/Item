@@ -49,6 +49,7 @@
                     <li><a href="#">箱包</a></li>
                     <li><a href="#">书本</a></li>
                     <li><a href="#">零食</a></li>
+                    <li><a href="#">游戏</a></li>
                     <li><a href="#">运动</a></li>
                     <li><a href="#">其它</a></li>
                 </ul>

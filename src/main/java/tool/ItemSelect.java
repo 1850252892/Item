@@ -5,7 +5,7 @@ package tool;
  * @ClassName: tool.ItemSelect
  * @Description: 商品查询条件参数
  *
- * @author: zhoulk
+ * @author: zxj
  * @date: 2018/6/28 15:17
  *
  * Modification History:

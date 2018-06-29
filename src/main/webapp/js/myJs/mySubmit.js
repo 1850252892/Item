@@ -57,7 +57,7 @@ var itemTable = function () {
         });
 
     return oTableInit;
-}
+};
 
 function options(value, row, index) {
     return[

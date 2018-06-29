@@ -36,11 +36,7 @@ public class ItemServiceImpl implements IItemService {
 		itemOther.setBrowser(0);
 		itemOther.setCollect(0);
 		itemOtherMapper.insert(itemOther);
-		if (itemMapper.add(i) > 0) {
-			return true;
-		} else {
-			return false;
-		}
+        return itemMapper.add(i) > 0;
 	}
 
 	@Override

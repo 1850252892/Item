@@ -3,7 +3,14 @@ package model;
 import po.Item;
 
 import java.util.List;
-
+/**
+ *
+ * @Description: 添加描述
+ *
+ * @author: zxj
+ * @date: 2018/6/28 19:52
+ *
+ */
 public class ItemDetails  {
     private String id;//商品id
     private String time;//创建时间

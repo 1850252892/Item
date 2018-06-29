@@ -11,15 +11,23 @@
     <script type="text/javascript" src="/js/jquery.cookie.js"></script>
     <script type="text/javascript" src="/js/PCASClass.js"></script>
     <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <style type="text/css">
+        select{
+            background: rgb(242,242,242);
+            float: left;
+            border: 0px;
+            width: auto;
+        }
+    </style>
 </head>
 <body>
 <a name="top"></a>
 
     <div class="head-dock">
         <div id="address" style="float: left;z-index: 999">
-            <div id="province" name="province3" style="margin-left:50px;float: left;"></div>
-            <div id="city" name="city3"  style="float: left;"></div>
-            <div id="area" name="area3"  style="float: left;"></div>
+            <select id="province" name="province" style="margin-left:50px;"></select>
+            <select id="city" name="city" ></select>
+            <select id="area" name="area"  ></select>
         </div>
 
             <div style="margin-right:10px;">
@@ -76,12 +84,31 @@
 </body>
 
 <script type="text/javascript">
-    var province=$("#province option:selected").text();
-    var city=    $("#city option:selected").text();
-    var area=    $("#area option:selected").text();
-    if (province =="" ||city==""||area==""){
+    var p=$.cookie("province");
+    var c=$.cookie("city");
+    var d=$.cookie("district");
+
+    new PCAS("province","city","area",p,c,d);
+    if (p =="" ||c==""|| d=="" ||p==null||c==null||d==null){
         getAddress(returnCitySN["cip"]);
+    }else {
+        $("#province").css("width",2*p.length-1+"em");
+        $("#city").css("width",2*c.length-1+"em");
+        $("#area").css("width",2*d.length-2+"em");
     }
+
+    $(document).ready(function(){
+        $("select").change(function () {
+            var province=$("#province option:selected").text();
+            var city=    $("#city option:selected").text();
+            var area=    $("#area option:selected").text();
+            $.cookie("province",province);
+            $.cookie("city",city);
+            $.cookie("district",area);
+
+        })
+    });
+
 
 
     function getAddress(data) {
@@ -103,6 +130,10 @@
                 $("#province").append(p+"-");
                 $("#city").append(c+"-");
                 $("#area").append(d);
+                new PCAS("province","city","area",p,c,d);
+                $("#province").css("width",2*p.length-1+"em");
+                $("#city").css("width",2*c.length-1+"em");
+                $("#area").css("width",2*d.length-2+"em");
             }
         })
     }

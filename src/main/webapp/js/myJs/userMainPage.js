@@ -59,8 +59,8 @@ $(function () {
 				"name" : name,
 				"address" : address,
 				"mail" : mail,
-				"password" : new_password_1,
-				"oldpassword" : old_password
+				"password" : $.md5(new_password_1),
+				"oldpassword" :$.md5(old_password)
 			}),
 			success : function(data) {
 				if (data == "oldpasserro") {

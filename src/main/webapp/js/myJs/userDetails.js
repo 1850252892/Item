@@ -1,6 +1,6 @@
 $(function () {
     getUserDetails();
-})
+});
 
 function getUserDetails() {
     var username=getUrlParam("uid");

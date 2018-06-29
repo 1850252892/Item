@@ -13,16 +13,16 @@ $(function () {
     getOther();
 
 
-})
+});
 var p=$.cookie("province");
 var c=$.cookie("city");
 var d=$.cookie("district");
-var  address=p+"-"+c+"-"+d;
+var  address=p+"-"+c;
 function setHotImg() {
     var s = new select();
     s.order = "b.browser";
     s.startLine = 0;
-    s.endLine = 6;
+    s.endLine = 3;
     s.status = "FREE";
     s.isDesc = "DESC";
     var box = $("#lunbo");
@@ -40,23 +40,31 @@ function setHotImg() {
                 box.empty();
             for (var i = 0; i < len; i++) {
                 if (i == 0)
+                {
                     box.append("<div class='item active'" +
                         "style='height: 500px; width: 800px; margin: 0; padding: 0;'>" +
                         "<a href='/item?itemid=" + items[i].id + "'><img src='" + items[i].imgpath[0] + "'" +
                         "alt='...'" +
                         "style='height: 500px; width: 800px;'></a>\n" +
                         "</div>");
+                    $(".hot-right").append(
+                        "<a href='/item?itemid="+items[i].id+"'><img src='"+items[i].imgpath[0]+"'width='150px'></a>" +
+                        "<a href='/item?itemid="+items[i].id+"' style='padding: 0px;'>"+items[i].name+"</a>");
+                }
                 else if (i<3)
+                {
                     box.append("<div class='item'" +
                         "style='height: 500px; width: 800px; margin: 0; padding: 0;'>" +
                         "<a href='/item?itemid=" + items[i].id + "'><img src='" + items[i].imgpath[0] + "'" +
                         "alt='...'" +
                         "style='height:500px; width: 100%;'></a>\n" +
                         "</div>");
-                else{
                     $(".hot-right").append(
                         "<a href='/item?itemid="+items[i].id+"'><img src='"+items[i].imgpath[0]+"'width='150px'></a>" +
                         "<a href='/item?itemid="+items[i].id+"' style='padding: 0px;'>"+items[i].name+"</a>");
+                }
+                else{
+
                 }
 
             }
@@ -94,7 +102,7 @@ var select = function () {
     var startLine;
     var endLine;
     var address;
-}
+};
 
 function getHot() {
     var s = new select();

@@ -6,14 +6,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>换了呗</title>
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
-    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
-    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="/css/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
     <!-- Bootstrap 核心 JavaScript 文件 -->
     <script type="text/javascript" src="/js/jquery-3.1.1.js"></script>
     <script type="text/javascript" src="/js/jquery.cookie.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/myJs/main.js"></script>
+    <script type="text/javascript" src="/js/myJs/main.js"></script>
 
 </head>
 <body>

@@ -1,10 +1,13 @@
+body{
+    background: rgb(242,242,242);
+}
 .item_box{
-    width: 1100px;
+    width: 1170px;
     height: auto;
     overflow: auto;
     padding: 0 10px;
     margin: 0 auto;
-    background: rgba(245, 190, 229, 0.2);
+    background: white;
     padding-bottom: 100px;
 
 
@@ -47,8 +50,8 @@
     float: right;
 }
 .item_li{
-    width: 250px;
-    height:auto;
+    width: 265px;
+    height:300px;
     overflow: auto;
     background: white;
     float: left;
@@ -58,7 +61,7 @@
 
 }
 .item_li img{
-    width: 248px;
+    width: 263px;
 }
 .item-name,.item-mon{
     width: 188px;

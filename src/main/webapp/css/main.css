@@ -10,7 +10,6 @@ body {
     margin: 0 auto;
     margin-top: 20px;
     background-color: white;
-    padding-bottom: 10px;
 
 }
 
@@ -38,13 +37,13 @@ body {
 
 .bottom .item {
     width: 280px;
-    height: auto;
+    height: 300px;
     overflow: auto;
     background: white;
     float: left;
     margin: 5px;
     border: 1px solid rgba(2, 2, 2, 0.2);
-    padding-bottom: 20px;
+    /*padding-bottom: 20px;*/
 }
 
 .item img {

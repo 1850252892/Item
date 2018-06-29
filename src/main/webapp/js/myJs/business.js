@@ -58,7 +58,7 @@ var itemTable = function () {
             /* 修改后点勾那个按钮触发的方法 */
         });
     return oTableInit;
-}
+};
 
 function options(value, row, index) {
     return[

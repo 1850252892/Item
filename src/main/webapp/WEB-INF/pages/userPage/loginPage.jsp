@@ -17,7 +17,8 @@
 
     <style type="text/css">
         body {
-            background-image: url("images/logimg.jpg");
+            background-image: url("/images/background/1.jpg");
+            background-attachment: fixed;
         }
     </style>
 </head>

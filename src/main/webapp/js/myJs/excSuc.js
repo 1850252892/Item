@@ -57,7 +57,7 @@ function loadData(excData) {
 			state="交换失败";
             break;
 		case -2:
-			state="已取消"
+			state="已取消";
             break;
 	}
 	$("#excState").append(state);

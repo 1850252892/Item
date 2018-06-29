@@ -31,7 +31,7 @@ $(function () {
     });
     isCollect();
 
-})
+});
 
 var message = null;
 var num = 10;

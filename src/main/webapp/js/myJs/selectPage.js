@@ -30,7 +30,7 @@ $(function () {
     $("#s_date").bind('click', function () {
         sort_by.empty();
         sort_by.append('<li class="active">排序规则</li>');
-        sort_by.append('<li class="active">发布时间</li>')
+        sort_by.append('<li class="active">发布时间</li>');
         s.order = "time";
         f_date = !f_date;
         if (f_date) {
@@ -74,7 +74,7 @@ $(function () {
         $("#endTime").val("");
         $("#highPrice").val("");
         $("#lowPrice").val("");
-    })
+    });
     $("#i_filter").bind('click', function () {
         pages = null;
         var sT = $("#startTime").val();
@@ -96,13 +96,13 @@ $(function () {
         getItemCount(s);
 
     })
-})
+});
 
 function initSelect() {
     var p=$.cookie("province");
     var c=$.cookie("city");
     var d=$.cookie("district");
-    var  address=p+"-"+c+"-"+d;
+    var  address=p+"-"+c;
 
     var info = getUrlParam("s");
     var type = getUrlParam("c");
@@ -148,7 +148,7 @@ var page = function (count) {
             getItemCount(s)
         }
     });
-}
+};
 
 function getItemCount(data) {
     var jdata = JSON.stringify(data);
@@ -217,4 +217,4 @@ var select = function () {
     var startLine;
     var endLine;
     var address;
-}
+};

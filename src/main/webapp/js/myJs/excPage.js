@@ -7,7 +7,7 @@ var itemid;
 $(function () {
     getItem();
     getData();
-})
+});
 
 function getUrlParam(key) {
     // 获取参数

@@ -83,37 +83,34 @@ public class ExchangeServiceImpl implements IExchangeService {
     @Override
     public ResultMap<String> changeExc(Map<String, String> m) {
         Exchange exchange = excMapper.selectExc(m.get("id"));
-        if (exchange.getState()!=Exchange.SUBMIT){
-            return new ResultMap<>(ResultMap.FAILED,"该交换单状态异常，不能进行操作");
-        }
-
-        Item item=itemMapper.selectById(exchange.getGid_a());
-        if (item == null){
-            m.put("id",exchange.getId());
-            m.put("state",Exchange.CANCEL+"");
-            excMapper.changeExc(m);
-            return new ResultMap<>(ResultMap.FAILED,"对方的商品已删除，交换失败");
-        }
-        item=itemMapper.selectById(exchange.getGid_b());
-        if (item == null){
-            m.put("id",exchange.getId());
-            m.put("state",Exchange.CANCEL+"");
-            excMapper.changeExc(m);
-            return new ResultMap<>(ResultMap.FAILED,"己方的商品已删除，交换失败");
-        }
-
         ItemOther itemOther;
         itemOther=itemOtherMapper.select(exchange.getGid_b());
         if (itemOther.getStatus().equals("LOCK")){
-            m.put("id",exchange.getId());
-            m.put("state",Exchange.CANCEL+"");
-            excMapper.changeExc(m);
             return new ResultMap<>(ResultMap.FAILED,"己方的商品不可用，交换失败");
         }
 
         itemOther=new ItemOther();
         String messageInfo = "";
         if (m.get("state").equals("1")) {
+            if (exchange.getState()!=Exchange.SUBMIT){
+                return new ResultMap<>(ResultMap.FAILED,"该交换单状态异常，不能进行操作");
+            }
+
+            Item item=itemMapper.selectById(exchange.getGid_a());
+            if (item == null){
+                m.put("id",exchange.getId());
+                m.put("state",Exchange.CANCEL+"");
+                excMapper.changeExc(m);
+                return new ResultMap<>(ResultMap.FAILED,"对方的商品已删除，交换失败");
+            }
+            item=itemMapper.selectById(exchange.getGid_b());
+            if (item == null){
+                m.put("id",exchange.getId());
+                m.put("state",Exchange.CANCEL+"");
+                excMapper.changeExc(m);
+                return new ResultMap<>(ResultMap.FAILED,"己方的商品已删除，交换失败");
+            }
+
             messageInfo = "对方已同意你的交换请求";
             itemOther.setId(exchange.getGid_b());//将被交换的商品锁定
             itemOther.setStatus("LOCK");

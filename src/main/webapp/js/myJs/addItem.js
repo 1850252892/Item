@@ -106,7 +106,7 @@ $(function () {
     });
 
 
-})
+});
 
 //将base64转换为blod文件
 function convertBase64UrlToBlob(urlData){
@@ -129,7 +129,7 @@ function selectImg(file) {
     var img=new Image();
     img.src=path;
     img.onload=function () {
-        path = compress(img, 200, 200, 0.7);
+        path = compress(img, 200, 200, 0.8);
         $('#tailoringImg').cropper('replace', path, false);//默认false，适应高度，不失真
     }
 	// var fileReader = new FileReader();
@@ -178,12 +178,12 @@ function judgeCompress(image,imageSize) {
 
     //判断图片是否大于300000 bit
     var threshold = 300000;//阈值,可根据实际情况调整
-    console.log('imageSize:'+imageSize)
+    console.log('imageSize:'+imageSize);
     if(imageSize>threshold){
         var imageData = compress(image);
 
-        var newImage = new Image()
-        newImage.src = imageData
+        var newImage = new Image();
+        newImage.src = imageData;
         return newImage;
     }else {
         return image;
@@ -197,9 +197,9 @@ function judgeCompress(image,imageSize) {
  */
 function compress(image) {
     console.log('compress');
-    console.log(image)
+    console.log(image);
 
-    var canvas = document.createElement('canvas')
+    var canvas = document.createElement('canvas');
     var ctx = canvas.getContext('2d');
 
     var imageLength = image.length;
@@ -212,7 +212,7 @@ function compress(image) {
     ctx.drawImage(image, 0, 0, width, height);
 
     //压缩操作
-    var quality = 0.1;//图片质量  范围：0<quality<=1 根据实际需求调正
+    var quality = 0.5;//图片质量  范围：0<quality<=1 根据实际需求调正
     var imageData = canvas.toDataURL("image/jpeg", quality);
 
     console.log("压缩前：" + imageLength);

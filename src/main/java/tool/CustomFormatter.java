@@ -38,5 +38,5 @@ public class CustomFormatter {
     public static String fomartterDateToString(String fomat,Date date){
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat(fomat);
         return simpleDateFormat.format(date);
-    };
+    }
 }
